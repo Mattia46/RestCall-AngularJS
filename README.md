@@ -3,7 +3,6 @@ I've tried to make the simplest REST call using Angular $resource.
 
 ## Interface
 ![alt text](images/interface.png)
-
 ## User details
 ![alt text](images/details.png)
 
@@ -20,6 +19,12 @@ Just as a practice I have used Angular in order to delete the item form the
 list, by splice[$index, 1] function.
 If you want to Edit an user you should use the same input filed at the botton to
 create a new user.
+
+## Technologies used
+* Javascript
+* AngularJS
+* jsonplaceholder
+
 
 ## How to run locally
 ```
