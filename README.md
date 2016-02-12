@@ -2,9 +2,9 @@
 I've tried to make the simplest REST call using Angular $resource.
 
 ## Interface
-![alt text](images/interface.png)
+![alt text](images/homepage.png)
 ## User details
-![alt text](images/details.png)
+![alt text](images/userDetails.png)
 
 
 ## Objectives of exercise
