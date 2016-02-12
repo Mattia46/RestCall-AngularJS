@@ -1,0 +1,20 @@
+.userInfo {
+  width: 50em;
+  height: 10em;
+  margin-top: 6em;
+}
+
+.mainContainer {
+  width: 70em;
+  height: auto;
+  margin-top: 2em;
+}
+
+.addUser {
+  float: right;
+  margin-right: 3em;
+}
+
+.header {
+  margin-left: 10em;
+}

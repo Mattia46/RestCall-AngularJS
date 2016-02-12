@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2//EN">
+
+<html ng-app='userApp'>
+  <head>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src='bower_components/angular/angular.js'></script>
+    <script src='bower_components/angular-resource/angular-resource.js'></script>
+    <script src='app/app.js'></script>
+    <script src='app/mainController.js'></script>
+    <script src='app/userService.js'></script>
+    <title>
+      CRUD app
+    </title>
+  </head>
+
+  <body ng-controller='mainController as mainCtrl'>
+    <center>
+      <div class='header'>
+        <h1> Create Read Update and Delete (CRUD) </h1>
+      </div>
+      <div class='mainContainer'>
+        <table class='table table-striped'>
+          <thead>
+            <tr>
+              <th>Name </th>
+              <th>Email</th>
+              <th>Details</th>
+              <th>Delete</th>
+              <th>Edit</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr ng-repeat='user in mainCtrl.users'>
+              <td>{{ user.name }}</td>
+              <td>{{ user.email }}</td>
+              <td>
+                <button type='button' class='btn btn-primary' ng-click='mainCtrl.showUserData(user.id)'> Info </button>
+              </td>
+              <td>
+                <button type='button' class='btn btn-primary' ng-click='mainCtrl.users.splice($index, 1)'>Remove</button>
+              </td>
+              <td>
+                <button type='button' class='btn btn-primary' ng-click='mainCtrl.editUser(user)'>Edit </button>
+              </td>
+          </tbody>
+        </table>
+        <div class='addUser'>
+          <input type='text' ng-model='mainCtrl.name' placeholder='name'>
+          <input type='text' ng-model='mainCtrl.email' placeholder='email'>
+          <button type='button' class='btn btn-success' ng-click='mainCtrl.addUser()'>Add User </button>
+        </div>
+        <div class='userInfo'>
+          {{ mainCtrl.currentUser }}
+        </div>
+      </div>
+    </center>
+  </body>
+</html>

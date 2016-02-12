@@ -1,0 +1,44 @@
+    <table class='table table-striped'>
+      <thead>
+        <tr>
+          <th>Name </th>
+          <th>Email</th>
+          <th>Details</th>
+          <th>Delete</th>
+          <th>Edit</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat='user in mainCtrl.users'>
+          <td>{{ user.name }}</td>
+          <td>{{ user.email }}</td>
+          <td>
+            <button type='button' class='btn btn-primary'
+              ng-click='mainCtrl.showUserData(user.id)'> Info
+            </button>
+          </td>
+          <td>
+            <a ng-click='mainCtrl.users.splice($index, 1)'>Remove</a>
+          </td>
+          <td>
+            <button type='button' class='btn btn-primary' ng-click='mainCtrl.editUser(user)'>Edit
+            </button>
+          </td>
+      </tbody>
+    </table>
+    <div class='addUser'>
+      <div>
+        <input type='text' ng-model='mainCtrl.name' placeholder='name'>
+      </div>
+      <div>
+        <input type='text' ng-model='mainCtrl.email' placeholder='email'>
+      </div>
+      <div>
+        <button type='button' class='btn btn-success'
+                                           ng-click='mainCtrl.addUser()'>Add User
+        </button>
+      </div>
+    </div>
+    <div class='userInfo'>
+      {{ mainCtrl.currentUser }}
+    </div>
